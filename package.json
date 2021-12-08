@@ -1,0 +1,31 @@
+{
+  "name": "datawood-webserver",
+  "version": "1.0.0",
+  "description": "Webserver for datawood made for a raspberry pi",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gieldid/Datawood-webserver.git"
+  },
+  "keywords": [
+    "datawood",
+    "webserver"
+  ],
+  "author": "Giel Jurriëns",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gieldid/Datawood-webserver/issues"
+  },
+  "homepage": "https://github.com/gieldid/Datawood-webserver#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "10.0.0",
+    "express": "4.17.1",
+    "mariadb": "2.5.5",
+    "serialport": "9.2.8"
+  }
+}
