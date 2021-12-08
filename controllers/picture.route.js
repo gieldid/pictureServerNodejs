@@ -1,23 +1,24 @@
 const express = require("express");
 const router = express.Router();
-const {spawn} = require('child_process');
+const PythonShell = require('python-shell').PythonShell;
 
 router.get("/", async function (request, response) {
+    var options = {
+        mode: 'json',
+        pythonOptions: ['-u'],
+        scriptPath: '/home/pi/Documents/python/',
+        args: []
+      };
+      
+      PythonShell.run('cam2rgb.py', options, function (err, results) {
+        if (err) 
+          throw err;
+          console.log('results: %j', results);
+          response.json(results[0]);
+        // Results is an array consisting of messages collected during execution
+        
+      });
 
-    var dataToSend;
-     // spawn new child process to call the python script
-    const python = spawn('python', ['../python/cam2rgb.py']);
-
-    python.stdout.on('data', function (data) {
-        console.log('Pipe data from python script ...');
-        dataToSend = data.toString();
-       });
-
-    python.on('close', (code) => {
-        console.log(`child process close all stdio with code ${code}`);
-        // send data to browser
-        response.json(dataToSend)
-    });
 });
 
 
