@@ -5,6 +5,7 @@ password: robotlab
 
 ## Basic usage
 Go to the following url when the server is running: http://raspberrypi.local/getColor
+
 This will take a picture and get the color of the object back.
 
 Result is in json and looks like this:
