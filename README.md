@@ -14,7 +14,7 @@ Result is in json and looks like this:
 ```
 
 ## Start the server
-Run the server by going to the directory and run the follow8ng commands:
+Run the server by going to the directory(for us this is: Documents/webserver) and run the followng commands:
 
 ```
 sudo node server.js
@@ -22,10 +22,14 @@ sudo node server.js
 
 
 ## Install the server
-- Setup the pi with nodejs: https://www.w3schools.com/nodejs/nodejs_raspberrypi.asp
+Incase you want to reinstall the server or on a different device follow the following steps:
+
+- Setup the pi with nodejs: https://www.w3schools.com/nodejs/nodejs_raspberrypi.asp (mainly the nodejs part at the bottem of the page)
 
 Find a suitable directory on your pi and download this git repo to it. In the same directory as the package.json run the following command:
 
 ```
 npm install
 ```
+
+Sometimes it requires you to change the read/write rights to access the python scripts.
