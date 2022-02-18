@@ -14,7 +14,7 @@ Result is in json and looks like this:
 ```
 
 ## Start the server
-Run the server by going to the directory(for us this is: Documents/webserver) and run the followng commands:
+Run the server by going to the directory(/home/pi/Documents/webserver) and run the followng commands:
 
 ```
 sudo node server.js
